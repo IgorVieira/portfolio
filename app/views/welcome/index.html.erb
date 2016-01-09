@@ -1,0 +1,29 @@
+<div class="wrapper wrapper_padding clearfix">
+	<div class="col-1 about homepage_content">
+		<h2>About</h2>
+		<hr>
+		<p>
+			Cardigan tofu flannel four dollar toast kombucha bitters brunch artisan, kickstarter meggings everyday carry sustainable franzen affogato. Ennui butcher mustache cardigan affogato chia.</p>
+			<p>Meh kickstarter food truck artisan <a href="">@IgorPRVieira</a>.
+		</p>
+	
+	</div>
+	<div class="col-2 homepage_content">				
+		<h2>Stuff I've  Written</h2>
+		<hr>		
+		<% @post.each do |post| %>
+			<h3><a href="#"><%= link_to post.title, post%></a></h3>
+			<p class="date"><%= post.created_at.strftime("%A,%b %d")%></p>
+		<% end %>
+	</div>
+	<div class="col-3 homepage_content">
+		<h2>Stuff I've  Built</h2>
+		<hr>
+		<h3><a href="">Kabum Podecast</a></h3>
+		<p class="date"> Friday May 26th</p>
+		<h3><a href="">PIB</a></h3>
+		<p class="date"> Friday May 26th</p>
+		<h3><a href="">Igor Vieira -> My Homepage!</a></h3>
+		<p class="date"> Friday May 26th</p>
+	</div>
+</div>
