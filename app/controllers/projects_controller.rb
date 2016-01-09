@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
 		@project =  Project.new project_params
 
 		if @project.save
-			redirect_to @project, notice: "That project was successfully"
+			redirect_to @project, notice: "That project was successfully saved"
 		else
 			render 'new'
 		end
@@ -20,6 +20,23 @@ class ProjectsController < ApplicationController
 
 	def show
 		
+	end
+
+	def edit
+		
+	end
+
+	def update
+		if @project.update project_params
+			redirect_to @project, notice: "That project was successfully updated"
+		else
+			render edit
+		end
+	end
+
+	def destroy
+		@project.destroy
+		redirect_to projects_path
 	end
 
 	private
